@@ -21,16 +21,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.11",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.8.0",
-    "@typescript-eslint/parser": "^2.8.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "2.2.1",
-    "typescript": "^3.9.7"
+    "prettier": "2.2.1"
   },
   "keywords": [
     "gatsby"
@@ -44,10 +35,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public",
-    "type-check": "tsc --noEmit",
-    "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
-    "lint-fix": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js --fix"
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
     "type": "git",
