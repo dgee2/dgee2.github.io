@@ -1,0 +1,20 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Gatsby Publish
+        uses: enriikke/gatsby-gh-pages-action@v2.1.1
+        with:
+          # A personal access token needed to push your site after it has been built.
+          access-token: 
+          # The branch expected by GitHub to have the static files needed for your site.
+          deploy-branch: gh-pages
