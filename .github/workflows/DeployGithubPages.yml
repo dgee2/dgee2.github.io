@@ -18,5 +18,8 @@ jobs:
       - name: Update npm
         run: npm install npm@v7 -g
 
+      - name: Install packages
+        run: npm install
+
       - name: Build static site
         run: npm run build
