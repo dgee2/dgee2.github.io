@@ -16,12 +16,7 @@ jobs:
           node-version: '14'
 
       - name: Update npm
-        run: npm update
+        run: npm install npm@v7 -g
 
-      - name: Gatsby Publish
-        uses: enriikke/gatsby-gh-pages-action@v2.1.1
-        with:
-          # A personal access token needed to push your site after it has been built.
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          # The branch expected by GitHub to have the static files needed for your site.
-          deploy-branch: gh-pages
+      - name: Build static site
+        run: npm run build
