@@ -20,6 +20,7 @@ interface LayoutData {
   site: {
     siteMetadata: {
       title: string;
+      author: string;
     },
     buildTime: string;
   };
@@ -31,6 +32,7 @@ function Layout({ children }: LayoutProps) {
       site {
         siteMetadata {
           title
+          author
         }
         buildTime(formatString: "YYYY-MM-DD hh:mm a")
       }
@@ -53,7 +55,8 @@ function Layout({ children }: LayoutProps) {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()} - Site was built on {data.site.buildTime}
+          © {new Date().getFullYear()} {data.site.siteMetadata.author}<br />
+          Site was last built {data.site.buildTime}
         </footer>
       </div>
     </>
