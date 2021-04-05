@@ -27,7 +27,7 @@ type SeoData = {
 }
 
 function SEO({ description = ``, lang = `en`, title }: SeoProps) {
-  const { site }: SeoData = useStaticQuery(
+  const { site } = useStaticQuery<SeoData>(
     graphql`
       query {
         site {

@@ -21,16 +21,18 @@ interface LayoutData {
     siteMetadata: {
       title: string;
     },
+    buildTime: string;
   };
 }
 
 function Layout({ children }: LayoutProps) {
-  const data: LayoutData = useStaticQuery(graphql`
+  const data = useStaticQuery<LayoutData>(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
         }
+        buildTime(formatString: "YYYY-MM-DD hh:mm a")
       }
     }
   `)
@@ -51,7 +53,7 @@ function Layout({ children }: LayoutProps) {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}
+          © {new Date().getFullYear()} - Site was built on {data.site.buildTime}
         </footer>
       </div>
     </>
