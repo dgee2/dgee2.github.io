@@ -32,10 +32,12 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: 'https://www.dan-gee.co.uk'
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.1
+        with:
+          # GitHub token
+          token: ${{ secrets.GITHUB_TOKEN }}
