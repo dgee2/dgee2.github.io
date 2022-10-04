@@ -1,7 +1,7 @@
 const { description } = require("../../package");
 
 module.exports = {
-  title: "gee.rocks",
+  title: "dan-gee.co.uk",
   description: description,
   theme: "@vuepress/theme-blog",
   themeConfig: {
