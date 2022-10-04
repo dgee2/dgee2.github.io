@@ -38,6 +38,3 @@ jobs:
     steps:
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v1.2.1
-        with:
-          # GitHub token
-          token: ${{ secrets.GITHUB_TOKEN }}
