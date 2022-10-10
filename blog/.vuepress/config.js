@@ -6,10 +6,10 @@ module.exports = {
   theme: "@vuepress/theme-blog",
   themeConfig: {
     sitemap: {
-      hostname: "https://dgee2.github.io",
+      hostname: "https://www.dan-gee.co.uk",
     },
     feed: {
-      canonical_base: "https://dgee2.github.io",
+      canonical_base: "https://www.dan-gee.co.uk",
     },
     footer: {
       contact: [
