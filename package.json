@@ -1,5 +1,5 @@
 {
-  "name": "gee.rocks",
+  "name": "dan-gee.co.uk",
   "version": "0.0.1",
   "description": "Blog of Daniel Gee",
   "main": "index.js",
@@ -7,7 +7,6 @@
     "name": "Daniel Gee",
     "email": "dan@dan-gee.co.uk"
   },
-  "repository": "/gee.rocks",
   "scripts": {
     "dev": "vuepress dev blog",
     "build": "vuepress build blog"
